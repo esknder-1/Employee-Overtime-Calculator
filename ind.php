@@ -1,7 +1,6 @@
 <?php 
-require_once 'session.php';
-require_once 'functions.php';
-
+require_once 'sessi.php';
+require_once __DIR__ . '/fun.php';
 // Handle adding new employee
 if (isset($_POST['add_employee'])) {
     $name = htmlspecialchars($_POST['name']);
@@ -38,7 +37,7 @@ $displayList = filterEmployeesByName($_SESSION['employees'], $searchTerm);
 
     <div class="forms-container">
         <form method="POST">
-            <h3>Add Employee</h3>
+            <h3> ➕Add Employee</h3>
             <input type="text" name="name" placeholder="Name" required>
             <input type="number" name="wage" min="10" step="0.01" placeholder="Wage (min $10)" required>
             <button type="submit" name="add_employee">Add</button>
