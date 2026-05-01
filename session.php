@@ -9,7 +9,7 @@ if (!isset($_SESSION['employees'])) {
 // Handle the reset button
 if (isset($_POST['reset_data'])) {
     $_SESSION['employees'] = [];
-    header("Location: index.php");
+    header("Location: index.php"); 
     exit();
 }
 ?>
